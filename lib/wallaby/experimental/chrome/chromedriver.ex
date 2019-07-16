@@ -40,7 +40,10 @@ defmodule Wallaby.Experimental.Chrome.Chromedriver do
   @dialyzer {:nowarn_function, start_chromedriver: 1}
   defp start_chromedriver(tcp_port) do
     with {:ok, chromedriver} <- Chrome.find_chromedriver_executable() do
+      IO.inspect(chromedriver)
+      IO.inspect(wrapper_script())
       x = Port.open({:spawn_executable, wrapper_script()}, port_opts(chromedriver, tcp_port))
+      IO.inspect("starting chromedriver")
       IO.inspect(x)
       x
     else
