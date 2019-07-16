@@ -52,6 +52,7 @@ defmodule Wallaby.Experimental.Chrome.Chromedriver do
 
   defp args(chromedriver, port), do: [
       chromedriver,
+      "--whitelisted-ips",
       "--log-level=OFF",
       "--port=#{port}",
     ]
