@@ -47,6 +47,7 @@ defmodule Wallaby.Experimental.Chrome.Chromedriver do
   end
 
   defp wrapper_script do
+    IO.inspect("wrapper script...")
     Path.absname("priv/run_command.sh", Application.app_dir(:wallaby))
   end
 
