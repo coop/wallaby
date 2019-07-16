@@ -29,7 +29,9 @@ defmodule Wallaby.Experimental.Chrome.Chromedriver do
     {:reply, {:ok, base_url}, state}
   end
 
-  def handle_info(_msg, state) do
+  def handle_info(msg, state) do
+    IO.inspect("message received")
+    IO.inspect(msg)
     {:noreply, state}
   end
 
