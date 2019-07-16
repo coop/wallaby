@@ -269,7 +269,8 @@ defmodule Wallaby.Experimental.Chrome do
 
   defp headless_args do
     if headless?() do
-      ["--fullscreen", "--headless"]
+      # ["--fullscreen", "--headless"]
+      ["--headless"]
     else
       []
     end
