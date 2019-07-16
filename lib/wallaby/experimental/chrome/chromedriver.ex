@@ -52,7 +52,7 @@ defmodule Wallaby.Experimental.Chrome.Chromedriver do
 
   defp args(chromedriver, port), do: [
       chromedriver,
-      "--log-level=OFF",
+      "--log-level=ALL",
       "--port=#{port}",
     ]
 
